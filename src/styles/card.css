@@ -1,0 +1,106 @@
+.cardBase {
+  border-radius: 18px;
+  padding: 2px; /* gradient frame */
+  margin: 1rem 0;
+  background: transparent;
+  box-shadow: 0 12px 32px rgba(2, 6, 23, 0.6);
+  transition: transform 220ms ease, box-shadow 220ms ease;
+}
+
+.cardBase:hover {
+  transform: translateY(-8px) scale(1.01);
+  box-shadow: 0 30px 60px rgba(2, 6, 23, 0.7);
+}
+
+.cardInner {
+  border-radius: 16px;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.02),
+    rgba(255, 255, 255, 0.01)
+  );
+  padding: 1.25rem;
+  min-height: 280px;
+  color: #e6eef8;
+}
+
+.cardRow {
+  display: block;
+}
+.cardImage {
+  display: block;
+  width: 100%;
+  max-width: 320px;
+  height: 160px;
+  border-radius: 10px;
+  object-fit: cover;
+  margin-bottom: 0.6rem;
+}
+
+.cardTitle {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #f8fafc;
+}
+.cardCompany {
+  color: #c7d2e6;
+  font-weight: 600;
+  margin-top: 0.25rem;
+}
+.cardMeta {
+  color: #94a3b8;
+  margin-top: 0.6rem;
+}
+.cardMeta {
+  font-size: 0.95rem;
+}
+.cardPoints {
+  margin-top: 0.8rem;
+  padding-left: 1rem;
+}
+.cardPoints li {
+  margin: 0.45rem 0;
+  color: #cbd5e1;
+}
+.cardPoints li::marker {
+  color: #ffd166;
+}
+
+/* Neon variants for border/frame */
+.variant-1 {
+  background: linear-gradient(135deg, #00f6ff 0%, #7a2cff 45%, #ff3ca6 100%);
+}
+.variant-2 {
+  background: linear-gradient(135deg, #ff7ab6 0%, #8b5cf6 45%, #4fd1c5 100%);
+}
+.variant-3 {
+  background: linear-gradient(135deg, #3b82f6 0%, #7c3aed 45%, #06b6d4 100%);
+}
+
+/* inner glow to mimic mockup */
+.variant-1 .cardInner {
+  box-shadow: 0 6px 30px rgba(122, 44, 255, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.02);
+}
+.variant-2 .cardInner {
+  box-shadow: 0 6px 30px rgba(255, 122, 182, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.02);
+}
+.variant-3 .cardInner {
+  box-shadow: 0 6px 30px rgba(59, 130, 246, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.02);
+}
+@media (min-width: 768px) {
+  .cardRow {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+  .cardImage {
+    max-width: 320px;
+    height: 160px;
+  }
+  .cardInner {
+    min-height: 260px;
+  }
+}
